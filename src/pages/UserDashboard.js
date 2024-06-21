@@ -405,14 +405,6 @@ const UserDashboard = () => {
                       {complaint._id}
                     </span>
                   </p>
-                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-left text-sm">
-                    <span className="font-semibold text-red-600 text-sm ">
-                      ID:
-                    </span>
-                    <span className="font-semibold text-red-400 text-sm ml-2">
-                      {complaint._id}
-                    </span>
-                  </p>
                   {/* TIMELINE */}
                   <div
                     tabIndex={0}
