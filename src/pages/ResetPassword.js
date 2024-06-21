@@ -65,8 +65,12 @@ const Reset_Password = () => {
       setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);
+        navigate("/login");
       }, 2000);
+       
       form.password = "";
+      setConfirmPassword("");
+     
     } catch (error) {
       setAlertStatement(error.response.data.error);
       setShowAlert(true);
