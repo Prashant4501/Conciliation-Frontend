@@ -568,7 +568,7 @@ const UserDashboard = () => {
                     <form method="POST" onSubmit={verification}>
                       <button
                         type="submit"
-                        className="font-semibold btn border-none border-gray-400 text-blue-500 mr-1 bbg-gray-800 dark:bbg-gray-800"
+                        className="font-semibold btn border-none border-gray-400 text-blue-500 mr-1 bg-gray-950 dark:bg-gray-950 hover:bg-gray-900"
                         onClick={(e) => {
                           onHandleVerification(complaint._id);
                         }}
@@ -579,7 +579,7 @@ const UserDashboard = () => {
                     <form method="POST" onSubmit={reopenComplaint} className="">
                       <button
                         type="submit"
-                        className="font-semibold btn border-none border-gray-400 text-blue-500 mr-1 bg-gray-800 dark:bg-gray-800"
+                        className="font-semibold btn border-none border-gray-400 text-blue-500 mr-1 bg-gray-950 dark:bg-gray-950 hover:bg-gray-900"
                         onClick={(e) => {
                           onHandleVerification(complaint._id);
                         }}
