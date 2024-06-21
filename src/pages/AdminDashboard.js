@@ -430,6 +430,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400">
+                      Token ID:
+                    </span>
+                    {complaint.complaint._id}
+                  </h3>
 
                   <p className="text-sm text-gray-300">
                     <span className="font-semibold text-yellow-500 mr-1">
@@ -514,6 +520,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400">
+                      Token ID:
+                    </span>
+                    {complaint.complaint._id}
+                  </h3>
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -586,6 +598,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400">
+                      Token ID:
+                    </span>
+                    {complaint.complaint._id}
+                  </h3>
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -666,6 +684,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400">
+                      Token ID:
+                    </span>
+                    {complaint.complaint._id}
+                  </h3>
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -766,6 +790,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400">
+                      Token ID:
+                    </span>
+                    {complaint.complaint._id}
+                  </h3>
 
                   <div
                     tabIndex={0}
