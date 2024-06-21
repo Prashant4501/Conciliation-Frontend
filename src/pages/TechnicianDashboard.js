@@ -191,7 +191,7 @@ const TechnicianDashboard = () => {
       <Navbar />
       <div className="bg-gray-900 min-h-screen  overflow-x-hidden flex flex-wrap flex-col ">
         {/* Heading */}
-        <div className="my-5 bg-gray-900 text-center font-mono font-bold text-xs md:text-xl  mb-5">
+        <div className="my-5 bg-gray-900 text-center font-mono font-bold text-xs md:text-xl  mb-5  text-gray-500">
           Technician Dashboard
         </div>
         {/* Navigation Bar for complaint */}
