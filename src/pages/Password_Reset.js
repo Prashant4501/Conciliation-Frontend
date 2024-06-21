@@ -70,7 +70,7 @@ const Password_Reset_Link = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-900 flex items-center justify-center min-h-screen overflow-y-hidden">
+      <div className="bg-gray-900 flex items-center justify-center min-h-screen overflow-y-hidden ">
         <div className="container mx-auto mt-4 ">
           <form
             method="POST"
@@ -81,7 +81,7 @@ const Password_Reset_Link = () => {
               Reset Password
             </h2>
             <div className="mb-4 relative">
-              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  ">
+              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  text-gray-400">
                 <MdEmail />
               </div>
 
@@ -91,19 +91,19 @@ const Password_Reset_Link = () => {
                 onChange={onHandleChange}
                 name="email"
                 placeholder="Email"
-                className="w-full px-10 py-2  rounded-md mb-4    bg-gray-800 "
+                className="w-full px-10 py-2  rounded-md mb-4    bg-gray-800 text-gray-400 dark:text-gray-400"
                 required
               />
             </div>
             <div className="mb-4 relative">
-              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  ">
+              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  text-gray-400">
                 <RiUserSettingsFill />
               </div>
               <select
                 value={form.role}
                 onChange={onHandleChange}
                 name="role"
-                className="w-full px-10 py-2  rounded-md mb-4   bg-gray-800"
+                className="w-full px-10 py-2  rounded-md mb-4   bg-gray-800 text-gray-400"
               >
                 <option value="user">User</option>
                 <option value="admin">Admin</option>

@@ -90,7 +90,7 @@ const Reset_Password = () => {
             </h2>
             <div className="mb-4">
               <div className="relative">
-                <div className="iconn absolute inset-y-0 left-0 px-3 py-3  ">
+                <div className="iconn absolute inset-y-0 left-0 px-3 py-3 text-gray-400 ">
                   <FaLock />
                 </div>
                 <input
@@ -99,13 +99,13 @@ const Reset_Password = () => {
                   onChange={onHandleChange}
                   name="password"
                   placeholder="Enter new Password"
-                  className="w-full px-10 py-2  rounded-md mb-4    bg-gray-800 "
+                  className="w-full px-10 py-2  rounded-md mb-4  text-gray-400  bg-gray-800 "
                   required
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="absolute inset-y-0 right-0 px-3 py-2 "
+                  className="absolute inset-y-0 right-0 px-3 py-2 text-gray-400"
                 >
                   <svg
                     className="h-5 w-5 "
@@ -119,7 +119,7 @@ const Reset_Password = () => {
             </div>
             <div className="mb-4">
               <div className="relative">
-                <div className="iconn absolute inset-y-0 left-0 px-3 py-3  ">
+                <div className="iconn absolute inset-y-0 left-0 px-3 py-3  text-gray-400">
                   <FaLock />
                 </div>
                 <input
@@ -127,13 +127,13 @@ const Reset_Password = () => {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Confirm Password"
-                  className="w-full px-10 py-2  rounded-md mb-4    bg-gray-800 "
+                  className="w-full px-10 py-2  rounded-md mb-4  text-gray-400  bg-gray-800 "
                   required
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="absolute inset-y-0 right-0 px-3 py-2 "
+                  className="absolute inset-y-0 right-0 px-3 py-2 text-gray-400"
                 >
                   <svg
                     className="h-5 w-5 "
@@ -147,14 +147,14 @@ const Reset_Password = () => {
             </div>
             {/* Role */}
             <div className="mb-4 relative">
-              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  ">
+              <div className="iconn absolute inset-y-0 left-0 px-3 py-3 text-gray-400  ">
                 <RiUserSettingsFill />
               </div>
               <select
                 value={form.role}
                 name="role"
                 onChange={onHandleChange}
-                className="w-full px-10 py-2  rounded-md mb-4   bg-gray-800"
+                className="w-full px-10 py-2  rounded-md mb-4 text-gray-400  bg-gray-800"
               >
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
