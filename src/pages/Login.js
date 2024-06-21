@@ -38,7 +38,7 @@ const Login = () => {
         }
       );
       if (response.data) {
-        
+
         sessionStorage.setItem("loggedin", true);
         localStorage.setItem("role", response.data.role);
         switch (form.role) {
@@ -68,9 +68,9 @@ const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-    const Redirect = () => {
-      navigate("/resetpasswordlink");
-    };
+  const Redirect = () => {
+    navigate("/resetpasswordlink");
+  };
 
   return (
     <>
@@ -145,7 +145,10 @@ const Login = () => {
             </button>
             <div className="mb-2 mt-2 text-right">
               <p>
-                <a  className="text-blue-600 hover:text-red-300 cursor-pointer" onClick={Redirect}>
+                <a
+                  className="text-blue-600 hover:text-red-300 cursor-pointer"
+                  onClick={Redirect}
+                >
                   Forgot Password ?
                 </a>
               </p>

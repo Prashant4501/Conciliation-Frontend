@@ -26,7 +26,8 @@ const Navbar = (props) => {
     username: username,
     role: role,
   };
-    const url = "https://conciliation-backend.onrender.com";
+  const url = "https://conciliation-backend.onrender.com";
+
 
   /* Logging out  */
   const handleLogout = async () => {
@@ -34,15 +35,11 @@ const Navbar = (props) => {
       setShowAlertStatement(processing);
       setShowAlert(true);
       // Send a POST request to the logout endpoint
-      const response = await axios.post(
-        `${url}/api/auth/logout`,
-        form,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(`${url}/api/auth/logout`, form, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setTimeout(() => {
         setShowAlert(false);
         // Set the loggedin session variable to false

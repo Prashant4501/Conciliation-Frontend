@@ -28,7 +28,8 @@ const AdminDashboard = () => {
   const [form, setForm] = useState({
     technicianId: "",
   });
-
+  const url = "https://conciliation-backend.onrender.com";
+  // ${url}
   const verify = {
     _id: {
       id,
@@ -88,7 +89,7 @@ const AdminDashboard = () => {
       const fetchComplaints = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:8080/api/admin/complaints/pending",
+            "${url}/api/admin/complaints/pending",
             {
               headers: {
                 "Content-Type": "application/json",
@@ -126,7 +127,7 @@ const AdminDashboard = () => {
   const pendingFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/admin/complaints/pending",
+        `${url}/api/admin/complaints/pending`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -141,7 +142,7 @@ const AdminDashboard = () => {
   const assignedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/admin/complaints/assigned",
+        `${url}/api/admin/complaints/assigned`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -156,7 +157,7 @@ const AdminDashboard = () => {
   const resolvedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/admin/complaints/resolved",
+        `${url}/api/admin/complaints/resolved`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -171,7 +172,7 @@ const AdminDashboard = () => {
   const verifiedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/admin/complaints/verified",
+        `${url}/api/admin/complaints/verified`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -186,7 +187,7 @@ const AdminDashboard = () => {
   const closedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/admin/complaints/closed",
+       `${url}/api/admin/complaints/closed`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -210,7 +211,7 @@ const AdminDashboard = () => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/admin/complaints/assignedtechnician",
+          `${url}/api/admin/complaints/assignedtechnician`,
           assign,
           {
             headers: {
@@ -234,7 +235,7 @@ const AdminDashboard = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/admin/complaints/closecomplain",
+       `${url}/api/admin/complaints/closecomplain`,
         verify,
         {
           headers: {
