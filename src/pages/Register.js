@@ -80,7 +80,6 @@ const Register = () => {
         `${url}/api/auth/register`,
         form,
         {
-          timeout: 5000,
           headers: {
             "Content-Type": "application/json",
           },
