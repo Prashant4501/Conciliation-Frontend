@@ -1,0 +1,76 @@
+//? COMPLAINT SCHEMA
+{
+    "_id": {
+        "$oid": "6672752f6a5d20220f0f76fc"
+    },
+    "complaint_id": "user1",
+    "title": "text",
+    "details": "1",
+    "files": null,
+    "status": "resolved",
+    "technicianAssigned": true,
+    "technicianId": "tech1",
+    "verified": true,
+    "complaintClosed": true,
+    "complaintDate": "2024-6-19 11:35:34",
+    "technicianAssignedAt": "2024-6-19 11:35:53",
+    "complainResolvedAt": "2024-6-19 11:36:21",
+    "verifiedByUserAt": "2024-6-19 11:36:47",
+    "complainClosedAt": "2024-6-19 11:37:4"
+}
+/* Credentials schema */
+//? USER SCHEMA
+{
+    "_id": {
+        "$oid": "666f35f11708ef73316707dc"
+    },
+    "username": "user1",
+    "email": "gkrcoder@gmail.com",
+    "password": "$2b$10$sw31EGCWIPdUMZ77nwbZJ.Yy8hE4sKGXcem/3...rTLaRNZnoY8/6",
+    "role": "user",
+    "activeSession": false,
+    "lastLoggedIn": "2024-6-19 11:36:35",
+    "loggedOutAt": "2024-6-19 11:36:50",
+    "lastLinkRequestedAt":" ",
+    "lastPasswordChangedAt":" ",
+
+}
+//? ADMIN SCHEMA
+{
+    "_id": {
+        "$oid": "665b624c98cd6af0fed48ebb"
+    },
+    "username": "gaurav",
+    "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+    "creationDate": "2006-09-26T00:00:00Z",
+    "activeSession": false,
+    "lastLoggedIn": "2024-6-19 11:36:59",
+    "loggedOutAt": "2024-6-19 11:37:6",
+    "lastLinkRequestedAt":" ",
+    "lastPasswordChangedAt":" ",
+}
+//? TECHNICIAN SCHEMA
+{
+    "_id": {
+        "$oid": "665b627598cd6af0fed4a528"
+    },
+    "username": "tech1",
+    "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+    "role": "technician",
+    "creationDate": "2006-09-26T00:00:00Z",
+    "activeSession": false,
+    "lastLoggedIn": "2024-6-19 11:36:19",
+    "loggedOutAt": "2024-6-19 11:36:23",
+    "lastLinkRequestedAt":" ",
+    "lastPasswordChangedAt":" ",
+}
+
+
+//? WHILE CHANGING PASSWORD
+
+// extra parameter gets added for each role to change password and after changed both are removed from dataset
+
+{
+    resetToken: "", 
+    resetTokenExpiry: ""
+}

@@ -1,0 +1,291 @@
+{
+    "_id": {
+        "$oid": "6672752f6a5d20220f0f76fc"
+    },
+    "complaint_id": "user1",
+    "title": "text",
+    "details": "1",
+    "files": null,
+    "status": "resolved",
+    "technicianAssigned": true,
+    "technicianId": "tech1",
+    "verified": true,
+    "complaintClosed": true,
+    "complaintDate": "2024-6-19 11:35:34",
+    "technicianAssignedAt": "2024-6-19 11:35:53",
+    "complainResolvedAt": "2024-6-19 11:36:21",
+    "verifiedByUserAt": "2024-6-19 11:36:47",
+    "complainClosedAt": "2024-6-19 11:37:4"
+}
+// {
+//     "username": "user1",
+//     "password": "<hashed_password>",
+//     "complaints": [
+//         {
+//             "complaint_id": "1",
+//             "title": "Account Creation Issue",
+//             "details": "Not able to create new account",
+//             "files": "",
+//             "status": "pending",
+//             "technicianAssigned": false,
+//             "verified": false,
+//             "complaintClosed": false,
+//             "complaintDate": "2006-09-26T00:00:00Z"
+//         }
+//     ],
+//     "role": "user",
+//     "creationDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "username": "user2",
+//     "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+//     "role": "user",
+//     "creationDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "username": "user3",
+//     "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+//     "role": "user",
+//     "creationDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "username": "gaurav",
+//     "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+//     "role": "admin",
+//     "creationDate": "2006-09-26T00:00:00Z"
+// }
+// {
+//     "username": "tech2",
+//     "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+//     "role": "technician",
+//     "creationDate": "2006-09-26T00:00:00Z"
+// }
+// {
+//     "username": "tech1",
+//     "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy",
+//     "role": "technician",
+//     "creationDate": "2006-09-26T00:00:00Z"
+// }
+// {
+//     "_id": {
+//         "$oid": "6652f4a640c440da125d45e4"
+//     },
+//     "name": "Gaurav",
+//     "email": "gkrcoder@gmail.com",
+//     "password": "$2b$10$GBJv2bbjUijaS/sUgHCameSaEP7LgqvFYZQAKbvXk9BlQ8dgbJPOy"
+// }
+// [
+//     {
+//         "complaint_id": "user1",
+//         "title": "Account Creation Issue",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "pending",
+//         "technicianAssigned": false,
+//         "technicianId": "",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user2",
+//         "title": "Account Creation Issue",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "pending",
+//         "technicianAssigned": false,
+//         "technicianId": "",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user3",
+//         "title": "Account Creation Issue",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "pending",
+//         "technicianAssigned": false,
+//         "technicianId": "",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user2",
+//         "title": "Account Creation Issue",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "pending",
+//         "technicianId": "",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     }
+// ]
+// {
+//     "_id": {
+//         "$oid": "665b632598cd6af0fed50326"
+//     },
+//     "complaint_id": "user2",
+//     "title": "Account Creation Issue",
+//     "details": "Not able to create new account",
+//     "files": "",
+//     "status": "pending",
+//     "technicianAssigned": false,
+//     "technicianId": "",
+//     "verified": false,
+//     "complaintClosed": false,
+//     "complaintDate": "2006-09-26T00:00:00Z"
+// }
+// {"_id":{"$oid":"666153eb8c06c5bc6e332fe7"},"complaint_id":"user3","title":"Privacy Issue","details":"Concerned about privacy settings--","files":"","status":"pending","technicianAssigned":false,"technicianId":"","verified":false,"complaintClosed":false,"complaintDate":"2024-05-12T00:00:00Z"}
+// [
+// {
+//     "complaint_id": "user1",
+//     "title": "Account Creation Issue111",
+//     "details": "Not able to create new account",
+//     "files": "",
+//     "status": "resolved",
+//     "technicianAssigned": true,
+//     "technicianId": "tech1",
+//     "verified": false,
+//     "complaintClosed": false,
+//     "complaintDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "complaint_id": "user1",
+//     "title": "Account Creation Issue111",
+//     "details": "Not able to create new account",
+//     "files": "",
+//     "status": "resolved",
+//     "technicianAssigned": true,
+//     "technicianId": "tech1",
+//     "verified": true,
+//     "complaintClosed": false,
+//     "complaintDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "complaint_id": "user1",
+//     "title": "Account Creation Issue111",
+//     "details": "Not able to create new account",
+//     "files": "",
+//     "status": "resolved",
+//     "technicianAssigned": true,
+//     "technicianId": "tech1",
+//     "verified": true,
+//     "complaintClosed": false,
+//     "complaintDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "complaint_id": "user1",
+//     "title": "Account Creation Issue111",
+//     "details": "Not able to create new account",
+//     "files": "",
+//     "status": "resolved",
+//     "technicianAssigned": true,
+//     "technicianId": "tech1",
+//     "verified": true,
+//     "complaintClosed": false,
+//     "complaintDate": "2006-09-26T00:00:00Z"
+// },
+// {
+//     "complaint_id": "user1",
+//     "title": "Account Creation Issue111",
+//     "details": "Not able to create new account",
+//     "files": "",
+//     "status": "resolved",
+//     "technicianAssigned": true,
+//     "technicianId": "tech1",
+//     "verified": true,
+//     "complaintClosed": false,
+//     "complaintDate": "2006-09-26T00:00:00Z"
+// },
+// ]
+// [
+//     {
+//         "complaint_id": "user1",
+//         "title": "Account hack Issue",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech1",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user1",
+//         "title": "Password Reset hacked Problem",
+//         "details": "Unable to reset my password",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech2",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-27T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user1",
+//         "title": "Email Notification Issue hack",
+//         "details": "Not receiving any email notifications",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech3",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-28T00:00:00Z"
+//     }
+// ]
+// ///not verified
+// [
+//     {
+//         "complaint_id": "user1",
+//         "title": "Account Creation Issue111",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech1",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user1",
+//         "title": "Account Creation Issue111",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech1",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },
+//     {
+//         "complaint_id": "user1",
+//         "title": "Account Creation Issue111",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech1",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     },{
+//         "complaint_id": "user1",
+//         "title": "Account Creation Issue111",
+//         "details": "Not able to create new account",
+//         "files": "",
+//         "status": "resolved",
+//         "technicianAssigned": true,
+//         "technicianId": "tech1",
+//         "verified": false,
+//         "complaintClosed": false,
+//         "complaintDate": "2006-09-26T00:00:00Z"
+//     }
+// ]
