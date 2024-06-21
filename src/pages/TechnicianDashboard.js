@@ -21,7 +21,7 @@ const TechnicianDashboard = () => {
   const navigate = useNavigate();
   const [technician, setTechnician] = useState("");
   const [showAlert, setShowAlert] = useState(false);
-
+  const url = "https://conciliation-backend.onrender.com";
   const verify = {
     _id: {
       id,
@@ -66,7 +66,7 @@ const TechnicianDashboard = () => {
       const fetchComplaints = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:8080/api/technician/complaints/pending",
+            `${url}/api/technician/complaints/pending`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const TechnicianDashboard = () => {
   const assignedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/technician/complaints/pending",
+        `${url}/api/technician/complaints/pending`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const TechnicianDashboard = () => {
   const resolvedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/technician/complaints/resolved",
+        `${url}/api/technician/complaints/resolved`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -137,7 +137,7 @@ const TechnicianDashboard = () => {
   const verifiedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/technician/complaints/verified",
+        `${url}/api/technician/complaints/verified`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -153,7 +153,7 @@ const TechnicianDashboard = () => {
   const closedFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/technician/complaints/closed",
+        `${url}/api/technician/complaints/closed`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -172,7 +172,7 @@ const TechnicianDashboard = () => {
     try {
       console.log(verify);
       const response = await axios.post(
-        "http://localhost:8080/api/technician/complaints/resolved",
+        `${url}/api/technician/complaints/resolved`,
         verify,
         {
           headers: {
