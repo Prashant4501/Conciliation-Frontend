@@ -15,7 +15,7 @@ const Register = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertStatement, setAlertStatement] = useState("");
   const registerdAlertStatement = "User Registered Successfully"
-
+  const url = "https://conciliation-backend.onrender.com";
   const time = () => {
   const date = new Date();
   const year = date.getFullYear();
@@ -77,7 +77,7 @@ const Register = () => {
     try {
       console.log("Attempting to reset Password:", { form });
       const response = await axios.post(
-        "http://localhost:8080/api/auth/register",
+        `${url}/api/auth/register`,
         form,
         {
           timeout: 5000,

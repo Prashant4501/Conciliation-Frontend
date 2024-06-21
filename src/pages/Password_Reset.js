@@ -24,7 +24,8 @@ const Password_Reset_Link = () => {
     }, 2000);
     return;
   };
-    const navigate = useNavigate();
+  const url = "https://conciliation-backend.onrender.com";
+  const navigate = useNavigate();
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -38,10 +39,10 @@ const Password_Reset_Link = () => {
     e.preventDefault();
 
     try {
-       setAlertStatement("Sending Reset Link.........");
-       setShowAlert(true);
+      setAlertStatement("Sending Reset Link.........");
+      setShowAlert(true);
       const response = await axios.post(
-        "http://localhost:8080/api/auth/password/reset/request",
+        `${url}/api/auth/password/reset/request`,
         form,
         {
           timeout: 10000,
@@ -56,7 +57,6 @@ const Password_Reset_Link = () => {
         setShowAlert(false);
       }, 2000);
       form.email = "";
-      
     } catch (error) {
       setAlertStatement(error.response.data.error);
       setShowAlert(true);
@@ -66,23 +66,7 @@ const Password_Reset_Link = () => {
     }
   };
 
-  // const getToken =async ()=>{
-  //   try {
-  //     const response = await axios.post(
-  //       "http://localhost:8080/api/auth/password/reset/request",
-  //       form.email,
-  //       {
-  //         timeout: 10000,
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log("An token sent to your  email");
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
+
   return (
     <>
       <Navbar />

@@ -26,6 +26,7 @@ const Navbar = (props) => {
     username: username,
     role: role,
   };
+    const url = "https://conciliation-backend.onrender.com";
 
   /* Logging out  */
   const handleLogout = async () => {
@@ -34,7 +35,7 @@ const Navbar = (props) => {
       setShowAlert(true);
       // Send a POST request to the logout endpoint
       const response = await axios.post(
-        "http://localhost:8080/api/auth/logout",
+        `${url}/api/auth/logout`,
         form,
         {
           headers: {

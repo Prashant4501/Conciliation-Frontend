@@ -19,7 +19,7 @@ const Reset_Password = () => {
   const token = searchParams.get("token"); // to get token from url
   const role = searchParams.get("role"); // to get role from url
   const navigate =  useNavigate();
-
+  const url = "https://conciliation-backend.onrender.com";
   const [form, setForm] = useState({
     password: "",
     role: "user", // Default role set to "user"
@@ -28,7 +28,6 @@ const Reset_Password = () => {
   const fn = () => {
     setTimeout(() => {
       setErrorMessage("");
-      
     }, 2000);
     return;
   };
@@ -53,7 +52,7 @@ const Reset_Password = () => {
     try {
        
       const response = await axios.post(
-        "http://localhost:8080/api/auth/password/reset-password",
+        `${url}/api/auth/password/reset-password`,
         form,
         {
           timeout: 10000,
