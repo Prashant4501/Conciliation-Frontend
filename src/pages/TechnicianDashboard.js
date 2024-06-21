@@ -21,6 +21,7 @@ const TechnicianDashboard = () => {
   const navigate = useNavigate();
   const [technician, setTechnician] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const [alertStatement ,setAlertStatement] = useState("");
   const url = "https://conciliation-backend.onrender.com";
   const verify = {
     _id: {
@@ -170,6 +171,9 @@ const TechnicianDashboard = () => {
   const resolveUpdateStatus = async (e) => {
     e.preventDefault();
     try {
+      setAlertStatement("Marking Resolved.....")
+       setShowAlert(true);
+     
       console.log(verify);
       const response = await axios.post(
         `${url}/api/technician/complaints/resolved`,
@@ -180,6 +184,10 @@ const TechnicianDashboard = () => {
           },
         }
       );
+      setAlertStatement("Complaint Resolved Successfully");
+        setTimeout(() => {
+          setShowAlert(false);
+        }, 1000);
       console.log(response.data.msg);
       assignedFetch();
     } catch (error) {
@@ -560,7 +568,7 @@ const TechnicianDashboard = () => {
         }`}
       >
         <Zoom>
-          <Alert data="Technician logged in" />
+          <Alert data={alertStatement} />
         </Zoom>
       </div>
     </>
