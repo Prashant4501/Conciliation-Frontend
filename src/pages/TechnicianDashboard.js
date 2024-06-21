@@ -344,7 +344,7 @@ const TechnicianDashboard = () => {
                     <form method="Post" onSubmit={resolveUpdateStatus}>
                       <button
                         type="submit"
-                        className="font-semibold btn border-none border-gray-400 text-blue-500 mr-1 bbg-gray-800"
+                        className="font-semibold btn border-none border-gray-400 text-blue-500 mr-1 bg-gray-950 dark:bg-gray-950 hover:bg-gray-900"
                         onClick={(e) => {
                           onHandleResolveStatus(complaint._id);
                         }}
