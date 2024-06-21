@@ -84,8 +84,8 @@ const Login = () => {
           >
             <h2 className="text-center text-2xl text-white mb-4">Login</h2>
 
-            <div className="mb-4 relative">
-              <div className="iconn absolute inset-y-0 left-0 px-3 py-3">
+            <div className="mb-4 relative text-gray-400">
+              <div className="iconn absolute inset-y-0 left-0 px-3 py-3 text-gray-400">
                 <FaUser />
               </div>
               <input
@@ -100,7 +100,7 @@ const Login = () => {
             </div>
             <div className="mb-4">
               <div className="relative">
-                <div className="iconn absolute inset-y-0 left-0 px-3 py-3">
+                <div className="iconn absolute inset-y-0 left-0 px-3 py-3 text-gray-400">
                   <FaLock />
                 </div>
                 <input
@@ -115,23 +115,23 @@ const Login = () => {
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="absolute inset-y-0 right-0 px-3 py-2"
+                  className="absolute inset-y-0 right-0 px-3 py-2 text-gray-400"
                 >
                   {passwordVisible ? <FaEye /> : <FaEyeSlash />}
                 </button>
               </div>
             </div>
-            <div className="mb-1 relative">
-              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  ">
+            <div className="mb-1 relative ">
+              <div className="iconn absolute inset-y-0 left-0 px-3 py-3  text-gray-400 ">
                 <RiUserSettingsFill />
               </div>
               <select
                 value={form.role}
                 name="role"
                 onChange={onHandleChange}
-                className="w-full px-10 py-2  rounded-md mb-4   bg-gray-800"
+                className="w-full px-10 py-2  rounded-md mb-4 bg-gray-800 dark:bg-gray-800 text-gray-400"
               >
-                <option value="user">User</option>
+                <option className="" value="user">User</option>
                 <option value="admin">Admin</option>
                 <option value="technician">Technician</option>
               </select>
