@@ -374,13 +374,13 @@ const UserDashboard = () => {
                   key={complaint.id}
                   className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96   rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
                 >
-                  <div class="rounded-lg h-64 overflow-hidden">
+                 {/*  <div class="rounded-lg h-64 overflow-hidden">
                     <img
                       alt="content"
                       className="object-cover object-center h-full w-full"
                       src="https://conciliation-backend.onrender.com/uploads/66748ecf6918a3130a66fa62.png"
                     />
-                  </div>
+                  </div> */}
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.title}
                   </h3>
