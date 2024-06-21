@@ -105,7 +105,7 @@ const ComplaintForm = ({ props }) => {
                 htmlFor="name"
                 className="form-control w-full max-w-xs mb-2 text-gray-300"
               >
-                <span className="label-text"> Tittle</span>
+                <span className="label-text text-gray-300"> Tittle</span>
               </label>
               <input
                 type="text"
@@ -114,7 +114,7 @@ const ComplaintForm = ({ props }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-full p-2 mb-4 bg-gray-800  rounded-md"
+                className="w-full p-2 mb-4 bg-gray-800  rounded-md text-gray-300"
               />
 
               <label
@@ -130,7 +130,7 @@ const ComplaintForm = ({ props }) => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 required
-                className="w-full p-2 mb-4  bg-gray-800 rounded-md"
+                className="w-full p-2 mb-4  bg-gray-800 rounded-md text-gray-300"
               ></textarea>
 
               <label className="form-control w-full max-w-xs  ">
@@ -146,7 +146,7 @@ const ComplaintForm = ({ props }) => {
                 name="file"
                 accept="image/*,video/*"
                 onChange={(e) => setFile(e.target.files[0])}
-                className=" file-input w-full p-2 mb-4 border bg-gray-800   rounded-md border-transparent "
+                className=" file-input w-full p-2 mb-4 border bg-gray-800   rounded-md border-transparenttext-gray-300 "
               />
 
               {error && <p className="text-red-500 mb-4">{error}</p>}
