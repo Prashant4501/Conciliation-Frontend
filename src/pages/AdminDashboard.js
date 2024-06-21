@@ -89,7 +89,7 @@ const AdminDashboard = () => {
       const fetchComplaints = async () => {
         try {
           const response = await axios.get(
-            "${url}/api/admin/complaints/pending",
+            `${url}/api/admin/complaints/pending`,
             {
               headers: {
                 "Content-Type": "application/json",
