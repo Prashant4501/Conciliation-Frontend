@@ -28,9 +28,9 @@ const UserDashboard = () => {
   const ComplaintsList = ({ complaints }) => {
     const [complaintImages, setComplaintImages] = useState({});
   };
-    const url = "https://conciliation-backend.onrender.com";
+  const url = "https://conciliation-backend.onrender.com";
 
-    // $(url)
+  // $(url)
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -79,7 +79,7 @@ const UserDashboard = () => {
       const fetchComplaints = async () => {
         try {
           const response = await axios.get(
-            `    $(url)/api/user/complaints/pending`,
+            `$(url)/api/user/complaints/pending`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -121,15 +121,12 @@ const UserDashboard = () => {
 
   const pendingFetch = async () => {
     try {
-      const response = await axios.get(
-            `$(url)/api/user/complaints/pending`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          params: form,
-        }
-      );
+      const response = await axios.get(`$(url)/api/user/complaints/pending`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        params: form,
+      });
       setComplaints(response.data);
     } catch (error) {
       console.error(error.data.error);
@@ -226,16 +223,13 @@ const UserDashboard = () => {
 
   const getImage = async (fileName, setImage) => {
     try {
-      const response = await axios.get(
-        `${url}/api/complaints/image`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          responseType: "arraybuffer",
-          params: { fileName },
-        }
-      );
+      const response = await axios.get(`${url}/api/complaints/image`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        responseType: "arraybuffer",
+        params: { fileName },
+      });
 
       const blob = new Blob([response.data], { type: "image/jpeg" });
       const url = URL.createObjectURL(blob);
