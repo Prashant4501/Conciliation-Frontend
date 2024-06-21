@@ -30,7 +30,7 @@ const UserDashboard = () => {
   };
   const url = "https://conciliation-backend.onrender.com";
 
-  // $(url)
+  // ${url}
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -79,7 +79,7 @@ const UserDashboard = () => {
       const fetchComplaints = async () => {
         try {
           const response = await axios.get(
-            `$(url)/api/user/complaints/pending`,
+            `${url}/api/user/complaints/pending`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const UserDashboard = () => {
 
   const pendingFetch = async () => {
     try {
-      const response = await axios.get(`$(url)/api/user/complaints/pending`, {
+      const response = await axios.get(`${url}/api/user/complaints/pending`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -135,7 +135,7 @@ const UserDashboard = () => {
 
   const assignedFetch = async () => {
     try {
-      const response = await axios.get(`$(url)/api/user/complaints/assigned`, {
+      const response = await axios.get(`${url}/api/user/complaints/assigned`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -148,7 +148,7 @@ const UserDashboard = () => {
   };
   const resolvedFetch = async () => {
     try {
-      const response = await axios.get(`$(url)/api/user/complaints/resolved`, {
+      const response = await axios.get(`${url}/api/user/complaints/resolved`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -162,7 +162,7 @@ const UserDashboard = () => {
 
   const closededFetch = async () => {
     try {
-      const response = await axios.get(`$(url)/api/user/complaints/closed`, {
+      const response = await axios.get(`${url}/api/user/complaints/closed`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -202,7 +202,7 @@ const UserDashboard = () => {
     try {
       console.log(verify);
       const response = await axios.post(
-        `$(url)/api/user/complaints/reopen`,
+        `${url}/api/user/complaints/reopen`,
         verify,
         {
           headers: {
