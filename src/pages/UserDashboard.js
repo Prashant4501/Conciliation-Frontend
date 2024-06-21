@@ -28,6 +28,9 @@ const UserDashboard = () => {
   const ComplaintsList = ({ complaints }) => {
     const [complaintImages, setComplaintImages] = useState({});
   };
+    const url = "https://conciliation-backend.onrender.com";
+
+    // $(url)
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -76,7 +79,7 @@ const UserDashboard = () => {
       const fetchComplaints = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:8080/api/user/complaints/pending",
+            `    $(url)/api/user/complaints/pending`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -119,7 +122,7 @@ const UserDashboard = () => {
   const pendingFetch = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/user/complaints/pending",
+            `$(url)/api/user/complaints/pending`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -135,15 +138,12 @@ const UserDashboard = () => {
 
   const assignedFetch = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:8080/api/user/complaints/assigned",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          params: form,
-        }
-      );
+      const response = await axios.get(`$(url)/api/user/complaints/assigned`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        params: form,
+      });
       setAssigned(response.data);
     } catch (error) {
       console.error(error.data.error);
@@ -151,15 +151,12 @@ const UserDashboard = () => {
   };
   const resolvedFetch = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:8080/api/user/complaints/resolved",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          params: form,
-        }
-      );
+      const response = await axios.get(`$(url)/api/user/complaints/resolved`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        params: form,
+      });
       setResolved(response.data);
     } catch (error) {
       console.error(error);
@@ -168,15 +165,12 @@ const UserDashboard = () => {
 
   const closededFetch = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:8080/api/user/complaints/closed",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          params: form,
-        }
-      );
+      const response = await axios.get(`$(url)/api/user/complaints/closed`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        params: form,
+      });
       setClosed(response.data);
     } catch (error) {
       console.error(error.data.error);
@@ -188,7 +182,7 @@ const UserDashboard = () => {
     try {
       console.log(verify);
       const response = await axios.post(
-        "http://localhost:8080/api/user/complaints/verified",
+        `${url}/api/user/complaints/verified`,
         verify,
         {
           headers: {
@@ -211,7 +205,7 @@ const UserDashboard = () => {
     try {
       console.log(verify);
       const response = await axios.post(
-        "http://localhost:8080/api/user/complaints/reopen",
+        `$(url)/api/user/complaints/reopen`,
         verify,
         {
           headers: {
@@ -233,7 +227,7 @@ const UserDashboard = () => {
   const getImage = async (fileName, setImage) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/complaints/image`,
+        `${url}/api/complaints/image`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -390,7 +384,7 @@ const UserDashboard = () => {
                     <img
                       alt="content"
                       className="object-cover object-center h-full w-full"
-                      src={`http://localhost:8080/uploads/${complaint.fileName}`}
+                      src="https://conciliation-backend.onrender.com/uploads/66748ecf6918a3130a66fa62.png"
                     />
                   </div>
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
