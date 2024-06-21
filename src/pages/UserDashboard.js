@@ -177,6 +177,8 @@ const UserDashboard = () => {
   const verification = async (e) => {
     e.preventDefault();
     try {
+      setAlertStatement("Verifying...");
+      setShowAlert(true);
       console.log(verify);
       const response = await axios.post(
         `${url}/api/user/complaints/verified`,
@@ -188,7 +190,7 @@ const UserDashboard = () => {
         }
       );
       setAlertStatement(complaintVerificationAlertStatement);
-      setShowAlert(true);
+      // setShowAlert(true);
       resolvedFetch();
       setTimeout(() => {
         setShowAlert(false);
@@ -200,6 +202,8 @@ const UserDashboard = () => {
   const reopenComplaint = async (e) => {
     e.preventDefault();
     try {
+      setAlertStatement("Reopening...")
+      setShowAlert(true);
       console.log(verify);
       const response = await axios.post(
         `${url}/api/user/complaints/reopen`,

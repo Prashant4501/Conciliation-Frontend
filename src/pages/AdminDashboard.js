@@ -234,6 +234,8 @@ const AdminDashboard = () => {
   const closedUpdateStatus = async (e) => {
     e.preventDefault();
     try {
+      setAlertStatement("Closing...")
+      setShowAlert(true);
       const response = await axios.post(
        `${url}/api/admin/complaints/closecomplain`,
         verify,

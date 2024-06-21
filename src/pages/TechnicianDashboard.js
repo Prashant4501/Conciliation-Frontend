@@ -39,6 +39,7 @@ const TechnicianDashboard = () => {
   });
 
   useEffect(() => {
+    setAlertStatement("Logged In ")
     setShowAlert(true);
     setTimeout(() => {
       setShowAlert(false);
