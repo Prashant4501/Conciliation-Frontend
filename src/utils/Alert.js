@@ -18,7 +18,7 @@ const Alert = (props) => {
           />
         </svg>
 
-        <span>{props.data}</span>
+        <span className="text-gray-400">{props.data}</span>
       </div>
     </>
   );
