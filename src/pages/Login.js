@@ -109,7 +109,7 @@ const Login = () => {
                   value={form.password}
                   onChange={onHandleChange}
                   placeholder="Password"
-                  className="w-full px-10 py-2 rounded-md mb-4 bg-gray-800"
+                  className="w-full px-10 py-2 rounded-md mb-4 bg-gray-800  text-gray-400"
                   required
                 />
                 <button
@@ -131,7 +131,9 @@ const Login = () => {
                 onChange={onHandleChange}
                 className="w-full px-10 py-2  rounded-md mb-4 bg-gray-800 dark:bg-gray-800 text-gray-400"
               >
-                <option className="" value="user">User</option>
+                <option className="" value="user">
+                  User
+                </option>
                 <option value="admin">Admin</option>
                 <option value="technician">Technician</option>
               </select>
