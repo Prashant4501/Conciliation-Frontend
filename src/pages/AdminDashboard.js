@@ -210,6 +210,8 @@ const AdminDashboard = () => {
       }, 2000);
     } else {
       try {
+        setAlertStatement("Assigning...")
+        setShowAlert(true);
         const response = await axios.post(
           `${url}/api/admin/complaints/assignedtechnician`,
           assign,
