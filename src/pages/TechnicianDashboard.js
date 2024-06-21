@@ -343,12 +343,34 @@ const TechnicianDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <p className="text-sm text-gray-300">
-                    <span className="font-semibold text-yellow-500 mr-1">
-                      Date:
-                    </span>
-                    {moment(complaint.complaintDate).format("MMMM Do, YYYY")}
-                  </p>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
+                  >
+                    <div className="collapse-title text-sm font-medium text-gray-200 -ml-2">
+                      Timeline
+                    </div>
+                    <div className="collapse-content">
+                      <div className="text-sm text-gray-300 space-y-2">
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Raised At:
+                          </span>
+                          {moment(complaint.complaintDate).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Assigned At:
+                          </span>
+                          {moment(complaint.technicianAssignedAt).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                   <p className="text-sm text-red-300 m-2 ">
                     <form method="Post" onSubmit={resolveUpdateStatus}>
                       <button
@@ -404,12 +426,42 @@ const TechnicianDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <p className="text-sm text-gray-300">
-                    <span className="font-semibold text-yellow-500 mr-1">
-                      Date:
-                    </span>
-                    {moment(complaint.complaintDate).format("MMMM Do, YYYY")}
-                  </p>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg"
+                  >
+                    <div className="collapse-title text-sm font-medium text-gray-200">
+                      Timeline
+                    </div>
+                    <div className="collapse-content">
+                      <div className="text-sm text-gray-300 space-y-2">
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Raised At:
+                          </span>
+                          {moment(complaint.complaintDate).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Assigned At:
+                          </span>
+                          {moment(complaint.technicianAssignedAt).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Resolved At:
+                          </span>
+                          {moment(complaint.complainResolvedAt).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))
             )}
@@ -452,12 +504,50 @@ const TechnicianDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <p className="text-sm text-gray-300">
-                    <span className="font-semibold text-yellow-500 mr-1">
-                      Date:
-                    </span>
-                    {moment(complaint.complaintDate).format("MMMM Do, YYYY")}
-                  </p>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg"
+                  >
+                    <div className="collapse-title text-sm font-medium text-gray-200">
+                      Timeline
+                    </div>
+                    <div className="collapse-content">
+                      <div className="text-sm text-gray-300 space-y-2">
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Raised At:
+                          </span>
+                          {moment(complaint.complaintDate).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Assigned At:
+                          </span>
+                          {moment(complaint.technicianAssignedAt).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Resolved At:
+                          </span>
+                          {moment(complaint.complainResolvedAt).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-yellow-500 mr-1">
+                            Verified At:
+                          </span>
+                          {moment(complaint.verifiedByUserAt).format(
+                            "MMMM Do, YYYY"
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))
             )}
