@@ -225,6 +225,24 @@ const Register = () => {
             >
               Register
             </button>
+            <div className="mb-2 mt-5 text-center  text-gray-400 ">
+              <span className="text-center text-gray-600">OR</span>
+            </div>
+            <div className="mb-2 mt-2 text-center  text-gray-400">
+              <span className="text">
+                <span>Have an account?</span>
+                <a
+                  href=""
+                  className="text-bold ml-2 text-blue-700 hover:text-blue-300"
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                >
+                  Login here
+                </a>
+                .
+              </span>
+            </div>
             <div className="error mt-5 mb-5 h-2">
               {errorMessage && (
                 <p className="text-red-500 text-center ">{errorMessage}</p>

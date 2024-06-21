@@ -28,17 +28,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        `${url}/api/auth/login`,
-        form,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(`${url}/api/auth/login`, form, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       if (response.data) {
-
         sessionStorage.setItem("loggedin", true);
         localStorage.setItem("role", response.data.role);
         switch (form.role) {
@@ -54,7 +49,6 @@ const Login = () => {
             localStorage.setItem("user", form.username);
             navigate("/user");
         }
-        
       }
     } catch (error) {
       const msg = error.response.data.error;
@@ -154,6 +148,23 @@ const Login = () => {
                   Forgot Password ?
                 </a>
               </p>
+            </div>
+
+            <div className="mb-2 mt-2 text-center  text-gray-400">
+              <span className="text-center text-gray-600">OR</span>
+            </div>
+            <div className="mb-2 mt-2 text-center  text-gray-400">
+              <span className="text">
+                <span>Don't have an account?</span>
+                <a
+                  href=""
+                  className="text-bold ml-2 text-blue-700 hover:text-blue-300"
+                  onClick={()=>{navigate('/register')}}
+                >
+                  Sign up here
+                </a>
+                .
+              </span>
             </div>
             <div className="error mt-5 mb-5 h-2">
               {errorMessage && <p className="text-red-500 ">{errorMessage}</p>}
