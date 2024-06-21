@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+/database_data_storing_schema.json
+/user.json
 
 # testing
 /coverage
