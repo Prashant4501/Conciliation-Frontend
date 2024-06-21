@@ -434,7 +434,7 @@ const AdminDashboard = () => {
                     <span className="font-semibold text-red-400">
                       Token ID:
                     </span>
-                    {complaint.complaint._id}
+                    {complaint._id}
                   </h3>
 
                   <p className="text-sm text-gray-300">
@@ -524,7 +524,7 @@ const AdminDashboard = () => {
                     <span className="font-semibold text-red-400">
                       Token ID:
                     </span>
-                    {complaint.complaint._id}
+                    {complaint._id}
                   </h3>
                   <div
                     tabIndex={0}
@@ -602,7 +602,7 @@ const AdminDashboard = () => {
                     <span className="font-semibold text-red-400">
                       Token ID:
                     </span>
-                    {complaint.complaint._id}
+                    {complaint._id}
                   </h3>
                   <div
                     tabIndex={0}
@@ -688,7 +688,7 @@ const AdminDashboard = () => {
                     <span className="font-semibold text-red-400">
                       Token ID:
                     </span>
-                    {complaint.complaint._id}
+                    {complaint._id}
                   </h3>
                   <div
                     tabIndex={0}
@@ -794,7 +794,7 @@ const AdminDashboard = () => {
                     <span className="font-semibold text-red-400">
                       Token ID:
                     </span>
-                    {complaint.complaint._id}
+                    {complaint._id}
                   </h3>
 
                   <div
