@@ -341,6 +341,14 @@ const TechnicianDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-left text-sm">
+                    <span className="font-semibold text-red-600 text-sm ">
+                      ID:
+                    </span>
+                    <span className="font-semibold text-red-400 text-sm ml-2">
+                      {complaint._id}
+                    </span>
+                  </p>
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -422,6 +430,14 @@ const TechnicianDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-left text-sm">
+                    <span className="font-semibold text-red-600 text-sm ">
+                      ID:
+                    </span>
+                    <span className="font-semibold text-red-400 text-sm ml-2">
+                      {complaint._id}
+                    </span>
+                  </p>
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg"
@@ -497,6 +513,14 @@ const TechnicianDashboard = () => {
                   >
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
+                  </p>
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-left text-sm">
+                    <span className="font-semibold text-red-600 text-sm ">
+                      ID:
+                    </span>
+                    <span className="font-semibold text-red-400 text-sm ml-2">
+                      {complaint._id}
+                    </span>
                   </p>
                   <div
                     tabIndex={0}
@@ -580,7 +604,16 @@ const TechnicianDashboard = () => {
                     className={`text-sm mb-2 ${getStatusColor(complaint.status)}`}
                   >
                     <span className="font-semibold pr-2">Status:</span>
-                    {complaint.status.toUpperCase()}
+                    {complaint.status}
+                  </p>
+
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-left text-sm">
+                    <span className="font-semibold text-red-600 text-sm ">
+                      ID:
+                    </span>
+                    <span className="font-semibold text-red-400 text-sm ml-2">
+                      {complaint._id}
+                    </span>
                   </p>
 
                   <div
