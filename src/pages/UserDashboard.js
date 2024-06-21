@@ -244,7 +244,7 @@ const UserDashboard = () => {
       <Navbar />
       <div className="bg-gray-900 min-h-screen  overflow-x-hidden flex flex-wrap flex-col ">
         {/* Heading */}
-        <div className="my-5 bg-gray-900 text-center font-mono font-bold text-xs md:text-xl overflow-x-hidden mr-5 ">
+        <div className="my-5 bg-gray-900 text-center font-mono font-bold text-xs md:text-xl overflow-x-hidden mr-5 text-gray-500 ">
           User Dashboard
         </div>
         {/* Raise Complaint Button */}
@@ -374,7 +374,7 @@ const UserDashboard = () => {
                   key={complaint.id}
                   className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96   rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
                 >
-                 {/*  <div class="rounded-lg h-64 overflow-hidden">
+                  {/*  <div class="rounded-lg h-64 overflow-hidden">
                     <img
                       alt="content"
                       className="object-cover object-center h-full w-full"
