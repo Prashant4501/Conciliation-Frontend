@@ -146,7 +146,7 @@ const ComplaintForm = ({ props }) => {
                 name="file"
                 accept="image/*,video/*"
                 onChange={(e) => setFile(e.target.files[0])}
-                className=" file-input w-full p-2 mb-4 border bg-gray-800   rounded-md border-transparenttext-gray-300 "
+                className=" file-input w-full p-2 mb-4 border bg-gray-800   rounded-md border-transparent text-gray-300 "
               />
 
               {error && <p className="text-red-500 mb-4">{error}</p>}
