@@ -430,7 +430,7 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center text-sm">
                     <span className="font-semibold text-red-400 text-sm">
                       Token ID:
                     </span>
@@ -520,12 +520,13 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
-                    <span className="font-semibold text-red-400">
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center text-sm">
+                    <span className="font-semibold text-red-400 text-sm">
                       Token ID:
                     </span>
                     {complaint._id}
-                  </h3>
+                  </p>
+
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -598,12 +599,13 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
-                    <span className="font-semibold text-red-400">
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center text-sm">
+                    <span className="font-semibold text-red-400 text-sm">
                       Token ID:
                     </span>
                     {complaint._id}
-                  </h3>
+                  </p>
+
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -684,12 +686,13 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
-                    <span className="font-semibold text-red-400">
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center text-sm">
+                    <span className="font-semibold text-red-400 text-sm">
                       Token ID:
                     </span>
                     {complaint._id}
-                  </h3>
+                  </p>
+
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg -ml-2"
@@ -790,12 +793,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
-                    <span className="font-semibold text-red-400">
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center text-sm">
+                    <span className="font-semibold text-red-400 text-sm">
                       Token ID:
                     </span>
                     {complaint._id}
-                  </h3>
+                  </p>
 
                   <div
                     tabIndex={0}
