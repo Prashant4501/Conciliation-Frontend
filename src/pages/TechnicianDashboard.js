@@ -325,12 +325,10 @@ const TechnicianDashboard = () => {
                   key={complaint.id}
                   className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96   rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
                 >
-                  <p className="text-gray-400  leading-relaxed mb-3">
-                    <span className="font-semibold text-yellow-500 mr-1">
-                      Username:
-                    </span>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400"></span>
                     {complaint.complaint_id}
-                  </p>
+                  </h3>
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.title}
                   </h3>
@@ -405,12 +403,10 @@ const TechnicianDashboard = () => {
                   key={complaint.id}
                   className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96   rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
                 >
-                  <p className="text-gray-400  leading-relaxed mb-3">
-                    <span className="font-semibold text-yellow-500 mr-1">
-                      Username:
-                    </span>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400"></span>
                     {complaint.complaint_id}
-                  </p>
+                  </h3>
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.msg}
                   </h3>
@@ -483,12 +479,10 @@ const TechnicianDashboard = () => {
                   key={complaint.id}
                   className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96   rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
                 >
-                  <p className="text-gray-400  leading-relaxed mb-3">
-                    <span className="font-semibold text-yellow-500 mr-1">
-                      Username:
-                    </span>
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400"></span>
                     {complaint.complaint_id}
-                  </p>
+                  </h3>
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.msg}
                   </h3>
