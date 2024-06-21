@@ -92,18 +92,18 @@ const ComplaintForm = ({ props }) => {
       <dialog id="my_modal_3" className="modal overflow-hidden">
         <div className="modal-box  bg-gray-900 ScrollbarsCustom native trackYVisible trackXVisible">
           <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gray-400">
               ✕
             </button>
           </form>
           <div className="m-5 bg-gray-900">
-            <h2 className="text-2xl font-bold mb-5 text-center">
+            <h2 className="text-2xl font-bold mb-5 text-center text-gray-300">
               Submit a Complaint
             </h2>
             <form onSubmit={handleSubmit}>
               <label
                 htmlFor="name"
-                className="form-control w-full max-w-xs mb-2"
+                className="form-control w-full max-w-xs mb-2 text-gray-300"
               >
                 <span className="label-text"> Tittle</span>
               </label>
@@ -119,9 +119,9 @@ const ComplaintForm = ({ props }) => {
 
               <label
                 htmlFor="description"
-                className="form-control w-full max-w-xs mb-2 "
+                className="form-control w-full max-w-xs mb-2 text-gray-300"
               >
-                <span className="label-text"> Description</span>
+                <span className="label-text text-gray-300"> Description</span>
               </label>
               <textarea
                 id="description"
@@ -135,7 +135,7 @@ const ComplaintForm = ({ props }) => {
 
               <label className="form-control w-full max-w-xs  ">
                 <div className="label">
-                  <span className="label-text">
+                  <span className="label-text text-gray-300">
                     Attach a photo or video (less than 10MB)
                   </span>
                 </div>
