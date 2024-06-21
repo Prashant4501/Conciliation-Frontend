@@ -430,12 +430,12 @@ const AdminDashboard = () => {
                     <span className="font-semibold">Status:</span>{" "}
                     {complaint.status}
                   </p>
-                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
-                    <span className="font-semibold text-red-400">
+                  <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-center">
+                    <span className="font-semibold text-red-400 text-sm">
                       Token ID:
                     </span>
                     {complaint._id}
-                  </h3>
+                  </p>
 
                   <p className="text-sm text-gray-300">
                     <span className="font-semibold text-yellow-500 mr-1">
