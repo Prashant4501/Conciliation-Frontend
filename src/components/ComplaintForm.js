@@ -4,8 +4,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Zoom } from "react-awesome-reveal";
 import Alert from "../utils/Alert";
-
+import ReactGA  from "react-ga"
 const ComplaintForm = ({ props }) => {
+      const TRACKING_ID = "G-R44VTCVSNZ";
+      ReactGA.initialize(TRACKING_ID);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);

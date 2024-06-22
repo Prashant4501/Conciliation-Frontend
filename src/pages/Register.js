@@ -7,8 +7,11 @@ import Navbar from "../components/Navbar";
 import axios from "axios";
 import { Zoom } from "react-awesome-reveal";
 import Alert from "../utils/Alert";
+import ReactGA from "react-ga";
 
 const Register = () => {
+    const TRACKING_ID = "G-R44VTCVSNZ";
+    ReactGA.initialize(TRACKING_ID);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");

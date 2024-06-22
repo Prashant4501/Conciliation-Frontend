@@ -7,8 +7,11 @@ import Navbar from "../components/Navbar";
 import axios from "axios";
 import { Zoom } from "react-awesome-reveal";
 import Alert from "../utils/Alert";
+import ReactGA from "react-ga";
 
 const Password_Reset_Link = () => {
+  const TRACKING_ID = "G-R44VTCVSNZ";
+  ReactGA.initialize(TRACKING_ID);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -65,7 +68,6 @@ const Password_Reset_Link = () => {
       }, 2000);
     }
   };
-
 
   return (
     <>

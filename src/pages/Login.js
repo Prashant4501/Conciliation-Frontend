@@ -6,8 +6,11 @@ import { FaEyeSlash, FaEye, FaUser, FaLock } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import { RiUserSettingsFill } from "react-icons/ri";
 import Alert from "../utils/Alert";
+import ReactGA from "react-ga";
 
 const Login = () => {
+    const TRACKING_ID = "G-R44VTCVSNZ";
+    ReactGA.initialize(TRACKING_ID);
   const [form, setForm] = useState({
     username: "",
     password: "",

@@ -7,8 +7,11 @@ import Navbar from "../components/Navbar";
 import axios from "axios";
 import { Zoom } from "react-awesome-reveal";
 import Alert from "../utils/Alert";
+import ReactGA from "react-ga";
 
 const Reset_Password = () => {
+    const TRACKING_ID = "G-R44VTCVSNZ";
+    ReactGA.initialize(TRACKING_ID);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search); // to get url
   const [passwordVisible, setPasswordVisible] = useState(false);

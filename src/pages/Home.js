@@ -4,8 +4,11 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import Contact from "../components/Contact";
 import GoToTop from "../utils/GotoTop";
+import ReactGA from "react-ga";
 
 const Home = () => {
+    const TRACKING_ID = "G-R44VTCVSNZ";
+    ReactGA.initialize(TRACKING_ID);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const onclickHandle = () => {

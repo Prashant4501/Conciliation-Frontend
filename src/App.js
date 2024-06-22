@@ -15,7 +15,10 @@ import Home from "./pages/Home";
 import Reset_Password from "./pages/ResetPassword";
 import Password_Reset_Link from "./pages/Password_Reset";
 
+import ReactGA from "react-ga";
 const App = () => {
+  const TRACKING_ID = "G-R44VTCVSNZ";
+  ReactGA.initialize(TRACKING_ID);
   return (
     <Router>
       <Routes>

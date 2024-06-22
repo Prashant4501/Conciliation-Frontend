@@ -10,8 +10,11 @@ import { useNavigate } from "react-router-dom";
 import moment from "moment";
 import Alert from "../utils/Alert";
 import { Zoom } from "react-awesome-reveal";
+import ReactGA from "react-ga";
 
 const UserDashboard = () => {
+    const TRACKING_ID = "G-R44VTCVSNZ";
+    ReactGA.initialize(TRACKING_ID);
   const [complaints, setComplaints] = useState([]);
   const [assigned, setAssigned] = useState([]);
   const [resolved, setResolved] = useState([]);

@@ -7,8 +7,11 @@ import axios from "axios";
 import moment from "moment";
 import Alert from "../utils/Alert";
 import { Zoom } from "react-awesome-reveal";
+import ReactGA from "react-ga";
 
 const AdminDashboard = () => {
+  const TRACKING_ID = "G-R44VTCVSNZ";
+  ReactGA.initialize(TRACKING_ID);
   const [pending, setPending] = useState([]);
   const [assigned, setAssigned] = useState([]);
   const [resolved, setResolved] = useState([]);
@@ -126,14 +129,11 @@ const AdminDashboard = () => {
 
   const pendingFetch = async () => {
     try {
-      const response = await axios.get(
-        `${url}/api/admin/complaints/pending`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/complaints/pending`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setPending(response.data);
     } catch (error) {
       console.error("Error fetching complaints", error);
@@ -141,14 +141,11 @@ const AdminDashboard = () => {
   };
   const assignedFetch = async () => {
     try {
-      const response = await axios.get(
-        `${url}/api/admin/complaints/assigned`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/complaints/assigned`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setAssigned(response.data);
     } catch (error) {
       console.error("Error fetching complaints", error);
@@ -156,14 +153,11 @@ const AdminDashboard = () => {
   };
   const resolvedFetch = async () => {
     try {
-      const response = await axios.get(
-        `${url}/api/admin/complaints/resolved`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/complaints/resolved`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setResolved(response.data);
     } catch (error) {
       console.error(error);
@@ -171,14 +165,11 @@ const AdminDashboard = () => {
   };
   const verifiedFetch = async () => {
     try {
-      const response = await axios.get(
-        `${url}/api/admin/complaints/verified`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/complaints/verified`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setVerified(response.data);
     } catch (error) {
       console.error(error);
@@ -186,14 +177,11 @@ const AdminDashboard = () => {
   };
   const closedFetch = async () => {
     try {
-      const response = await axios.get(
-       `${url}/api/admin/complaints/closed`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/complaints/closed`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setClosed(response.data);
     } catch (error) {
       console.error(error.data.error);
@@ -210,7 +198,7 @@ const AdminDashboard = () => {
       }, 2000);
     } else {
       try {
-        setAlertStatement("Assigning...")
+        setAlertStatement("Assigning...");
         setShowAlert(true);
         const response = await axios.post(
           `${url}/api/admin/complaints/assignedtechnician`,
@@ -236,10 +224,10 @@ const AdminDashboard = () => {
   const closedUpdateStatus = async (e) => {
     e.preventDefault();
     try {
-      setAlertStatement("Closing...")
+      setAlertStatement("Closing...");
       setShowAlert(true);
       const response = await axios.post(
-       `${url}/api/admin/complaints/closecomplain`,
+        `${url}/api/admin/complaints/closecomplain`,
         verify,
         {
           headers: {

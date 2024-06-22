@@ -8,8 +8,11 @@ import axios from "axios";
 import moment from "moment";
 import Alert from "../utils/Alert";
 import { Zoom } from "react-awesome-reveal";
+import ReactGA from "react-ga";
 
 const TechnicianDashboard = () => {
+    const TRACKING_ID = "G-R44VTCVSNZ";
+    ReactGA.initialize(TRACKING_ID);
   const [verified, setVerified] = useState([]);
   const [assigned, setAssigned] = useState([]);
   const [resolved, setResolved] = useState([]);
