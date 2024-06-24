@@ -56,7 +56,7 @@ const ComplaintForm = ({ props }) => {
     try {
       console.log(complaintData);
       const response = await axios.post(
-        `${url}/api/user/complaints/new`,
+        process.env.USER_COMPLAINT_RAISE_API,
         complaintData,
         {
           headers: {
