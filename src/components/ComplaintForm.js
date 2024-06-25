@@ -44,7 +44,7 @@ const ComplaintForm = ({ props }) => {
     complaintClosed: false,
     complaintDate: time(),
   };
-  // const url = "https://conciliation-backend.onrender.com";
+  const url = "https://conciliation-backend.onrender.com";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,7 +56,7 @@ const ComplaintForm = ({ props }) => {
     try {
       console.log(complaintData);
       const response = await axios.post(
-        process.env.USER_COMPLAINT_RAISE_API,
+        `${url}/api/user/complaints/new`,
         complaintData,
         {
           headers: {
