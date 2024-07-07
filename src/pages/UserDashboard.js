@@ -13,10 +13,9 @@ import { Zoom } from "react-awesome-reveal";
 import ReactGA from "react-ga";
 import Modal from "react-modal";
 
-
 const UserDashboard = () => {
-    const TRACKING_ID = "G-R44VTCVSNZ";
-    ReactGA.initialize(TRACKING_ID);
+  const TRACKING_ID = "G-R44VTCVSNZ";
+  ReactGA.initialize(TRACKING_ID);
   const [complaints, setComplaints] = useState([]);
   const [assigned, setAssigned] = useState([]);
   const [resolved, setResolved] = useState([]);
@@ -31,18 +30,18 @@ const UserDashboard = () => {
   const complaintVerificationAlertStatement = "Verification Successful";
   const loginAlertStatement = "User Logged in";
 
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState("");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
 
-    const openModal = (image) => {
-      setSelectedImage(image);
-      setModalIsOpen(true);
-    };
+  const openModal = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setModalIsOpen(true);
+  };
 
-    const closeModal = () => {
-      setModalIsOpen(false);
-      setSelectedImage("");
-    };
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedImage("");
+  };
   const ComplaintsList = ({ complaints }) => {
     const [complaintImages, setComplaintImages] = useState({});
   };
@@ -220,7 +219,7 @@ const UserDashboard = () => {
   const reopenComplaint = async (e) => {
     e.preventDefault();
     try {
-      setAlertStatement("Reopening...")
+      setAlertStatement("Reopening...");
       setShowAlert(true);
       console.log(verify);
       const response = await axios.post(
@@ -381,7 +380,7 @@ const UserDashboard = () => {
         <div className="showComplaint  overflow-y-auto">
           {/* Pending Complain Section */}
           <div
-            className={`  p-4 rounded-lg bg-gray-900 dark:bg-gray-900 flex flex-wrap justify-center align-middle ${
+            className={`p-4 rounded-lg bg-gray-900 dark:bg-gray-900 flex flex-wrap justify-center align-middle ${
               activeTab === 0 ? "visible" : "hidden"
             }`}
             id="dashboard"
@@ -394,13 +393,13 @@ const UserDashboard = () => {
               complaints.map((complaint) => (
                 <div
                   key={complaint.id}
-                  className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96   rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
+                  className="bg-gray-800 p-6 border-2 sm:w-52 md:w-96 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 sm:m-5 m-10 text-wrap border-gray-700"
                 >
-                  <div class="rounded-lg h-64 overflow-hidden ">
+                  <div className="rounded-lg h-64 overflow-hidden">
                     <img
-                      crossorigin="anonymous"
+                      crossOrigin="anonymous"
                       alt="content"
-                      className="object-fit object-center h-full w-full"
+                      className="object-fit object-center h-full w-full hover:cursor-zoom-in"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
                       onClick={() =>
                         openModal(
@@ -409,11 +408,10 @@ const UserDashboard = () => {
                       }
                     />
                   </div>
-
-                  <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
+                  <h3 className="sm:text-lg md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.title}
                   </h3>
-                  <p className="text-gray-400  leading-relaxed mb-3">
+                  <p className="text-gray-400 leading-relaxed mb-3">
                     {complaint.details}
                   </p>
                   <p
@@ -423,14 +421,13 @@ const UserDashboard = () => {
                     {complaint.status}
                   </p>
                   <p className="sm:text-lg md:text-xl font-semibold text-gray-500 mb-2 text-left text-sm">
-                    <span className="font-semibold text-red-600 text-sm ">
+                    <span className="font-semibold text-red-600 text-sm">
                       ID:
                     </span>
                     <span className="font-semibold text-red-400 text-sm ml-2">
                       {complaint._id}
                     </span>
                   </p>
-                  {/* TIMELINE */}
                   <div
                     tabIndex={0}
                     className="collapse collapse-arrow border-base-300 bg-gray-800 rounded-lg"
@@ -464,7 +461,7 @@ const UserDashboard = () => {
                     &times;
                   </button>
                   <img
-                  crossOrigin="anonymous"
+                    crossOrigin="anonymous"
                     src={selectedImage}
                     alt="Selected"
                     className="w-full h-auto rounded-lg"
