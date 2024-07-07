@@ -387,7 +387,7 @@ const UserDashboard = () => {
                       width={400}
                       height={400}
                       className="object-cover object-center h-full w-full"
-                      src="https://conciliation-backend.onrender.com/uploads/668ab5af637b74464ad21dc1.jpeg"
+                      src={`https://conciliation-backend.onrender.com/uploads/${complaint._id}.jpeg`}
                     />
                   </div>
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
