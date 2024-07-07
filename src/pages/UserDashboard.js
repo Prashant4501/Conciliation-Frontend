@@ -412,7 +412,7 @@ const UserDashboard = () => {
                         <img
                           crossOrigin="anonymous"
                           alt="content"
-                          className="object-fit object-center h-full w-full hover:cursor-zoom-in"
+                          className="object-fit object-center h-full w-full "
                           src={modalImage}
                         />
                       </div>
