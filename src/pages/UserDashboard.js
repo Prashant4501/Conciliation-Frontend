@@ -402,11 +402,11 @@ const UserDashboard = () => {
                       className="object-fit object-center h-full w-full hover:cursor-zoom-in"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
                       onClick={() =>
-                        document.getElementById("my_modal_3").showModal()
+                        document.getElementById("my_modal_5").showModal()
                       }
                     />
                     {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                    <dialog id="my_modal_3" className="modal">
+                    <dialog id="my_modal_5" className="modal">
                       <div className="modal-box">
                         <form method="dialog">
                           {/* if there is a button in form, it will close the modal */}
