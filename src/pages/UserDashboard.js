@@ -384,6 +384,8 @@ const UserDashboard = () => {
                   <div class="rounded-lg h-64 overflow-hidden ">
                     <img
                       alt="content"
+                      width={400}
+                      height={400}
                       className="object-cover object-center h-full w-full"
                       src="https://conciliation-backend.onrender.com/uploads/668ab5af637b74464ad21dc1.jpeg"
                     />
