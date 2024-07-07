@@ -385,12 +385,12 @@ const UserDashboard = () => {
                     <img
                       crossorigin="anonymous"
                       alt="content"
-                      width={400}
-                      height={400}
+                     
                       className="object-cover object-center h-full w-full"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
                     />
                   </div>
+                   
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.title}
                   </h3>
