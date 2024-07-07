@@ -386,7 +386,7 @@ const UserDashboard = () => {
                       crossorigin="anonymous"
                       alt="content"
                      
-                      className="object-cover object-center h-full w-full"
+                      className="object-fit object-center h-full w-full"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
                     />
                   </div>
