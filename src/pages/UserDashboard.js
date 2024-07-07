@@ -29,6 +29,7 @@ const UserDashboard = () => {
   const [alertStatement, setAlertStatement] = useState("");
   const complaintVerificationAlertStatement = "Verification Successful";
   const loginAlertStatement = "User Logged in";
+    const [isZoomed, setIsZoomed] = useState(false);
 
    const [modalImage, setModalImage] = useState("");
 
