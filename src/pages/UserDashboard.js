@@ -402,11 +402,26 @@ const UserDashboard = () => {
                       className="object-fit object-center h-full w-full hover:cursor-zoom-in"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
                       onClick={() =>
-                        openModal(
-                          `https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`
-                        )
+                        document.getElementById("my_modal_3").showModal()
                       }
                     />
+                    {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                    <dialog id="my_modal_3" className="modal">
+                      <div className="modal-box">
+                        <form method="dialog">
+                          {/* if there is a button in form, it will close the modal */}
+                          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                            ✕
+                          </button>
+                        </form>
+                        <img
+                          crossOrigin="anonymous"
+                          alt="content"
+                          className="object-fit object-center h-full w-full hover:cursor-zoom-in"
+                          src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
+                        />
+                      </div>
+                    </dialog>
                   </div>
                   <h3 className="sm:text-lg md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.title}
@@ -451,7 +466,7 @@ const UserDashboard = () => {
                 </div>
               ))
             )}
-            {modalIsOpen && (
+            {/*             {modalIsOpen && (
               <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
                 <div className="relative bg-gray-900 rounded-lg p-4 max-w-3xl w-full">
                   <button
@@ -468,7 +483,7 @@ const UserDashboard = () => {
                   />
                 </div>
               </div>
-            )}
+            )} */}
           </div>
           {/* Assigned Complain Section */}
           <div
