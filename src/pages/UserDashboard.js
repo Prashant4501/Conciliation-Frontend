@@ -30,18 +30,13 @@ const UserDashboard = () => {
   const complaintVerificationAlertStatement = "Verification Successful";
   const loginAlertStatement = "User Logged in";
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+   const [modalImage, setModalImage] = useState("");
 
-  const openModal = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    setModalIsOpen(true);
-  };
+   const openModal = (imageSrc) => {
+     setModalImage(imageSrc);
+     document.getElementById("my_modal_5").showModal();
+   };
 
-  const closeModal = () => {
-    setModalIsOpen(false);
-    setSelectedImage("");
-  };
   const ComplaintsList = ({ complaints }) => {
     const [complaintImages, setComplaintImages] = useState({});
   };
@@ -402,14 +397,14 @@ const UserDashboard = () => {
                       className="object-fit object-center h-full w-full hover:cursor-zoom-in"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
                       onClick={() =>
-                        document.getElementById("my_modal_5").showModal()
+                        openModal(
+                          `https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`
+                        )
                       }
                     />
-                    {/* You can open the modal using document.getElementById('ID').showModal() method */}
                     <dialog id="my_modal_5" className="modal">
                       <div className="modal-box">
                         <form method="dialog">
-                          {/* if there is a button in form, it will close the modal */}
                           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                             ✕
                           </button>
@@ -418,7 +413,7 @@ const UserDashboard = () => {
                           crossOrigin="anonymous"
                           alt="content"
                           className="object-fit object-center h-full w-full hover:cursor-zoom-in"
-                          src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
+                          src={modalImage}
                         />
                       </div>
                     </dialog>
@@ -466,24 +461,6 @@ const UserDashboard = () => {
                 </div>
               ))
             )}
-            {/*             {modalIsOpen && (
-              <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                <div className="relative bg-gray-900 rounded-lg p-4 max-w-3xl w-full">
-                  <button
-                    onClick={closeModal}
-                    className="absolute top-0 right-0 mt-2 mr-2 text-white text-2xl font-bold"
-                  >
-                    &times;
-                  </button>
-                  <img
-                    crossOrigin="anonymous"
-                    src={selectedImage}
-                    alt="Selected"
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-              </div>
-            )} */}
           </div>
           {/* Assigned Complain Section */}
           <div
