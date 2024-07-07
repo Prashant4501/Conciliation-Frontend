@@ -383,6 +383,7 @@ const UserDashboard = () => {
                 >
                   <div class="rounded-lg h-64 overflow-hidden ">
                     <img
+                      crossorigin="anonymous"
                       alt="content"
                       width={400}
                       height={400}
