@@ -36,7 +36,9 @@ const UserDashboard = () => {
      setModalImage(imageSrc);
      document.getElementById("my_modal_5").showModal();
    };
-
+  const handleImageClick = () => {
+    setIsZoomed(!isZoomed);
+  };
   const ComplaintsList = ({ complaints }) => {
     const [complaintImages, setComplaintImages] = useState({});
   };
@@ -412,8 +414,9 @@ const UserDashboard = () => {
                         <img
                           crossOrigin="anonymous"
                           alt="content"
-                          className="object-fit object-center h-full w-full "
+                          className={`object-fit object-center transition-transform duration-200 ${isZoomed ? "scale-150" : "scale-100"}`}
                           src={modalImage}
+                          onClick={handleImageClick}
                         />
                       </div>
                     </dialog>
