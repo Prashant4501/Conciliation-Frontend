@@ -11,6 +11,8 @@ import moment from "moment";
 import Alert from "../utils/Alert";
 import { Zoom } from "react-awesome-reveal";
 import ReactGA from "react-ga";
+import Modal from "react-modal";
+
 
 const UserDashboard = () => {
     const TRACKING_ID = "G-R44VTCVSNZ";
@@ -28,6 +30,19 @@ const UserDashboard = () => {
   const [alertStatement, setAlertStatement] = useState("");
   const complaintVerificationAlertStatement = "Verification Successful";
   const loginAlertStatement = "User Logged in";
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState("");
+
+    const openModal = (image) => {
+      setSelectedImage(image);
+      setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+      setModalIsOpen(false);
+      setSelectedImage("");
+    };
   const ComplaintsList = ({ complaints }) => {
     const [complaintImages, setComplaintImages] = useState({});
   };
@@ -385,12 +400,16 @@ const UserDashboard = () => {
                     <img
                       crossorigin="anonymous"
                       alt="content"
-                     
                       className="object-fit object-center h-full w-full"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
+                      onClick={() =>
+                        openModal(
+                          `https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`
+                        )
+                      }
                     />
                   </div>
-                   
+
                   <h3 className="sm:text-lg   md:text-xl font-semibold text-gray-200 mb-2">
                     {complaint.title}
                   </h3>
@@ -434,6 +453,24 @@ const UserDashboard = () => {
                   </div>
                 </div>
               ))
+            )}
+            {modalIsOpen && (
+              <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <div className="relative bg-gray-900 rounded-lg p-4 max-w-3xl w-full">
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-0 right-0 mt-2 mr-2 text-white text-2xl font-bold"
+                  >
+                    &times;
+                  </button>
+                  <img
+                  crossOrigin="anonymous"
+                    src={selectedImage}
+                    alt="Selected"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+              </div>
             )}
           </div>
           {/* Assigned Complain Section */}
