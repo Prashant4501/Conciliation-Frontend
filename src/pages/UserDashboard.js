@@ -399,6 +399,7 @@ const UserDashboard = () => {
                       alt="content"
                       className="object-fit object-center h-full w-full hover:cursor-zoom-in"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
+                      loading="lazy"
                       onClick={() =>
                         openModal(
                           `https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`
@@ -408,7 +409,7 @@ const UserDashboard = () => {
                     <dialog id="my_modal_5" className="modal">
                       <div className="modal-box">
                         <form method="dialog">
-                          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                          <button className="btn btn-sm btn-circle z-50 btn-ghost absolute right-2 top-2">
                             ✕
                           </button>
                         </form>
@@ -417,6 +418,7 @@ const UserDashboard = () => {
                           alt="content"
                           className={`object-fit object-center transition-transform duration-200 ${isZoomed ? "scale-150" : "scale-100"}`}
                           src={modalImage}
+                          loading="lazy"
                           onClick={handleImageClick}
                         />
                       </div>
