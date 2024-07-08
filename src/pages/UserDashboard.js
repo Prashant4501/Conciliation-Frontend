@@ -408,7 +408,7 @@ const UserDashboard = () => {
                     <dialog id="my_modal_5" className="modal">
                       <div className="modal-box">
                         <form method="dialog">
-                          <button className="btn btn-sm btn-circle z-50 btn-ghost absolute right-2 top-2">
+                          <button className="btn btn-sm btn-circle z-50 btn-ghost absolute right-2 top-2 bg-slate-200">
                             ✕
                           </button>
                         </form>
