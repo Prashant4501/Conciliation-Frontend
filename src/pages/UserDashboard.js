@@ -408,13 +408,13 @@ const UserDashboard = () => {
                     <dialog id="my_modal_5" className="modal">
                       <div className="modal-box">
                         <form method="dialog">
-                          <button className="absolute  btn btn-sm btn-circle z-50 btn-ghost  right-2 top-2 bg-slate-200 hover:bg-slate-600">
+                          <button className="absolute btn btn-sm btn-circle z-50 btn-ghost right-2 top-2 bg-slate-200 hover:bg-slate-600">
                             ✕
                           </button>
                         </form>
                         <img
                           crossOrigin="anonymous"
-                          alt="content"
+                          alt="Content"
                           className={`object-fit object-center transition-transform duration-200 ${isZoomed ? "scale-150" : "scale-100"}`}
                           src={modalImage}
                           onClick={handleImageClick}
