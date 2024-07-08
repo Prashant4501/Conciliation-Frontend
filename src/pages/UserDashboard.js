@@ -29,14 +29,14 @@ const UserDashboard = () => {
   const [alertStatement, setAlertStatement] = useState("");
   const complaintVerificationAlertStatement = "Verification Successful";
   const loginAlertStatement = "User Logged in";
-    const [isZoomed, setIsZoomed] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
 
-   const [modalImage, setModalImage] = useState("");
+  const [modalImage, setModalImage] = useState("");
 
-   const openModal = (imageSrc) => {
-     setModalImage(imageSrc);
-     document.getElementById("my_modal_5").showModal();
-   };
+  const openModal = (imageSrc) => {
+    setModalImage(imageSrc);
+    document.getElementById("my_modal_5").showModal();
+  };
   const handleImageClick = () => {
     setIsZoomed(!isZoomed);
   };
@@ -399,7 +399,6 @@ const UserDashboard = () => {
                       alt="content"
                       className="object-fit object-center h-full w-full hover:cursor-zoom-in"
                       src={`https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`}
-                      loading="lazy"
                       onClick={() =>
                         openModal(
                           `https://conciliation-backend.onrender.com/uploads/${complaint.fileName}`
@@ -418,7 +417,6 @@ const UserDashboard = () => {
                           alt="content"
                           className={`object-fit object-center transition-transform duration-200 ${isZoomed ? "scale-150" : "scale-100"}`}
                           src={modalImage}
-                          loading="lazy"
                           onClick={handleImageClick}
                         />
                       </div>
