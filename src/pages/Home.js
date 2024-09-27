@@ -77,7 +77,7 @@ const Modal = ({ onClose }) => {
               Username: <span className="font-mono">user1</span>
             </li>
             <li>
-              Password: <span className="font-mono">123</span>
+              Password: <span className="font-mono">1234</span>
             </li>
           </ul>
           <li className="font-bold list-none mt-1">Technician:</li>
