@@ -29,6 +29,15 @@ const Home = () => {
     }
   }, []);
 
+  useEffect(() => {
+    // Prevent scrolling when modal is open
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [showModal]);
+
   if (isLoggedIn) {
     const role = localStorage.getItem("role");
     switch (role) {
@@ -50,57 +59,78 @@ const Home = () => {
   };
 
   // Modal Component
-const Modal = ({ onClose }) => {
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-gray-800 p-6 rounded shadow-lg max-w-md w-full">
-        <h2 className="text-xl font-bold mb-4 text-center" >Notice</h2>
-        <p className="mb-4">
-          Login might take a little time as the server is hosted for free.
-          Please keep patience.
-        </p>
-        <p>For new User you can create by clicking get started</p>
-        <p className="font-bold m-3 text-center">Trial Credentials:</p>
-        <ul className="list-disc list-inside mb-4">
-          <li className="font-bold list-none">Admin:</li>
-          <ul className="list-disc list-inside">
-            <li>
-              Username: <span className="font-mono">gaurav</span>
-            </li>
-            <li>
-              Password: <span className="font-mono">123</span>
-            </li>
+  const Modal = ({ onClose }) => {
+    return (
+      <div
+        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ${showModal ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        <div className="bg-gray-800 p-6 rounded-lg max-w-md w-full transform transition-all duration-300 ease-in-out scale-100 relative">
+          <button
+            className="absolute top-2 right-2 text-gray-400 hover:text-white transition duration-300"
+            onClick={onClose}
+          >
+            {/* Close Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <h2 className="text-xl font-bold mb-4 text-center">Notice</h2>
+          <p className="mb-4">
+            Login might take a little time as the server is hosted for free.
+            Please keep patience.
+          </p>
+          <p>For new User you can create by clicking get started</p>
+          <p className="font-bold m-3 text-blue-500 text-center">Trial Credentials:</p>
+          <ul className="list-disc list-inside mb-4">
+            <li className="font-bold list-none">Admin:</li>
+            <ul className="list-disc list-inside">
+              <li>
+                Username: <span className="font-mono">gaurav</span>
+              </li>
+              <li>
+                Password: <span className="font-mono">123</span>
+              </li>
+            </ul>
+            <li className="font-bold list-none mt-1">User:</li>
+            <ul className="list-disc list-inside">
+              <li>
+                Username: <span className="font-mono">user1</span>
+              </li>
+              <li>
+                Password: <span className="font-mono">1234</span>
+              </li>
+            </ul>
+            <li className="font-bold list-none mt-1">Technician:</li>
+            <ul className="list-disc list-inside">
+              <li>
+                Username: <span className="font-mono">tech1</span>
+              </li>
+              <li>
+                Password: <span className="font-mono">123</span>
+              </li>
+            </ul>
           </ul>
-          <li className="font-bold list-none mt-1">User:</li>
-          <ul className="list-disc list-inside">
-            <li>
-              Username: <span className="font-mono">user1</span>
-            </li>
-            <li>
-              Password: <span className="font-mono">1234</span>
-            </li>
-          </ul>
-          <li className="font-bold list-none mt-1">Technician:</li>
-          <ul className="list-disc list-inside">
-            <li>
-              Username: <span className="font-mono">tech1</span>
-            </li>
-            <li>
-              Password: <span className="font-mono">123</span>
-            </li>
-          </ul>
-        </ul>
-        <button
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-          onClick={onClose}
-        >
-          Close
-        </button>
+       {  /* <button
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+            onClick={onClose}
+          >
+            Close
+          </button>*/}
+        </div>
       </div>
-    </div>
-  );
-};
-
+    );
+  };
 
   return (
     <>
